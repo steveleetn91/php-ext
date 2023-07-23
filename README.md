@@ -18,6 +18,8 @@ Create a new file and use phpinfo to check
 
 # Issue 
 
-If you need anything, please create new issue `https://github.com/steveleetn91/php-ext/issues`
+If you need anything, please create new issue `https://github.com/steveleetn91/php-ext/issues`. 
+
+One more thing if you enjoy and wanna I continue made extensions support for PHP, so let's me star for this repository.
 
 
