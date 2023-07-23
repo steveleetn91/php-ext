@@ -1,5 +1,5 @@
 # php-ext
-This is an list php extension to support for PHP, I will continue update and share it for everyone. Currently it only support PHP 8.0 or greater than 8.0.
+This is a php extensions, I will continue update and share it for everyone. Currently it only support PHP 8.0 or greater than 8.0.
 
 ## VThread 
 
