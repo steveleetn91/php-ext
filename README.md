@@ -16,6 +16,29 @@ Create a new file and use phpinfo to check
 ![alt text](https://github.com/steveleetn91/php-ext/blob/dev/document/phpinfo.PNG?raw=true)
 
 
+### Code for test
+
+On PHP:
+
+```
+        <?php
+
+        try {
+            
+            $data = [];
+            nukethread(function() use ($data){
+                // execute on native code
+                for($i=0;$i<50000000;$i++){
+                    $data[count($data)] = rand(1000,50000000);
+                }
+            });
+        }catch(\Exception $e) {
+            print_r($e->getMessage());
+        }
+
+        ?>
+```
+
 # Issue 
 
 If you need anything, please create new issue `https://github.com/steveleetn91/php-ext/issues`. 
