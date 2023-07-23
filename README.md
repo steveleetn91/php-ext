@@ -13,7 +13,7 @@ First step you need download file `.so` on folder `./vthread` after that add thi
 ### How to check working? 
 Create a new file and use phpinfo to check
 
-![alt text](https://github.com/steveleetn91/php-ext/document/phpinfo.PNG?raw=true)
+![alt text](https://github.com/steveleetn91/php-ext/blob/dev/document/phpinfo.PNG?raw=true)
 
 
 # Issue 
