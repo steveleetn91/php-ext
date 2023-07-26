@@ -20,7 +20,7 @@ Create a new file and use phpinfo to check
 
 ![alt text](https://github.com/steveleetn91/php-ext/blob/dev/document/vthread.PNG?raw=true)
 
-This function same with Fiber, I mean callback will execute in child thread but it's keep asyn. So why we need use it? 
+This function same with Fibers, I mean callback will execute in child thread but it's keep asyn. So why we need use it? 
 When you implement if appear errors then main process keep continue and only stop on child process. And it'll support execute
 your function callback on native code.
 
