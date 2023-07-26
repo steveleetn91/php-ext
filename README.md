@@ -16,7 +16,13 @@ Create a new file and use phpinfo to check
 ![alt text](https://github.com/steveleetn91/php-ext/blob/dev/document/phpinfo.PNG?raw=true)
 
 
-### Code for test
+### Code for test [nukethread]
+
+![alt text](https://github.com/steveleetn91/php-ext/blob/dev/document/vthread.PNG?raw=true)
+
+This function same with Fiber, I mean callback will execute in child thread but it's keep asyn. So why we need use it? 
+When you implement if appear errors then main process keep continue and only stop on child process. And it'll support execute
+your function callback on native code.
 
 On PHP:
 
@@ -25,12 +31,31 @@ On PHP:
 
         try {
             
-            $data = [];
-            nukethread(function() use ($data){
-                // execute on native code
-                for($i=0;$i<50000000;$i++){
-                    $data[count($data)] = rand(1000,50000000);
-                }
+            nukethread(function () {
+                printf("Done ");
+                sleep(1);
+            });
+        }catch(\Exception $e) {
+            print_r($e->getMessage());
+        }
+
+        ?>
+```
+
+### Code for test [nukethreadOnlyThread]
+
+
+It'll support execute your function callback on native code and only one thread.
+
+On PHP:
+
+```
+        <?php
+
+        try {
+            
+            echo nukethreadOnlyThread(function () {
+                return rand(1,999999999999999999);
             });
         }catch(\Exception $e) {
             print_r($e->getMessage());
